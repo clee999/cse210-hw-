@@ -55,9 +55,7 @@ class Program
                }
                
           }
-
-       
-
+          
         Console.Write($"Your grade is {letter}. ");
 
         if (grade >= 70)
