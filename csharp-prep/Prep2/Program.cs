@@ -40,11 +40,23 @@ class Program
         if (lastdigit >= 3 && lastdigit <= 6) 
         {
             letter += "-";
-        }
+
+               if (letter == "F-")
+               {
+                 letter = "F";
+               }
+          }
         else if (lastdigit >= 7)
         {
             letter += "+";
-        }
+               if (letter == "F+")
+               {
+                letter = "F";
+               }
+               
+          }
+
+       
 
         Console.Write($"Your grade is {letter}. ");
 
