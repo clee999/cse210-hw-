@@ -6,25 +6,54 @@ class Program
     {
 
           //Ouput asking the user for there name 
-       Console.Write("Enter your grade: ");
+       Console.Write("Enter your percentage: ");
        //input reads and stores value in the string varible
-       string grade = Console.ReadLine();
-       int number = int.Parse(grade);
+       
+       int grade = int.Parse(Console.ReadLine());
 
-        if ( number >= 90 ){
+       string letter = "";
+       int lastdigit = grade % 10;
 
-            Console.Write("You grade is A ");
+        if ( grade >= 90 )
+        {
+            letter = "A";
         }
-        else if (number >= 80 ) {
-
-            Console.Write("You grade is B ");
-
+        else if (grade >= 80 ) 
+        {
+            letter = "B";  
         }
 
-        else {
-
-            Console.Write("You grade is D ");
-
+        else if (grade >= 70 ) 
+        {
+            letter = "C";  
         }
+
+        else if (grade >= 60 ) 
+        {
+            letter = "D";
+        }
+        else 
+        {
+            letter = "F";
+        }
+
+        if (lastdigit >= 3 && lastdigit <= 6) 
+        {
+            letter += "-";
+        }
+        else if (lastdigit >= 7 || lastdigit == 0){
+            letter += "+";
+        }
+
+        Console.Write($"Your grade is {letter}. ");
+
+        if (grade >= 70)
+        {
+            Console.Write("Congrats, you've passed.");
+        }
+        else 
+        {
+             Console.Write("Unfortunately, you've Failed. Please try again.");
+        } 
     }
 }
