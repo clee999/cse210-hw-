@@ -41,7 +41,8 @@ class Program
         {
             letter += "-";
         }
-        else if (lastdigit >= 7 || lastdigit == 0){
+        else if (lastdigit >= 7)
+        {
             letter += "+";
         }
 
