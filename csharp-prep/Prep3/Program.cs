@@ -19,7 +19,7 @@ class Program
                 guess = int.Parse(Console.ReadLine());
                 guess_attempted += 1;
              
-                 //this if 
+                 //this If statement helps to reset the counter and arcs the user if they want to continue
                  if (guess == magic_number) {
                      Console.Write($"You've guessed it!, your total amount guesses are {guess_attempted}\n");
                      Console.Write("Would you like to continue? ");
@@ -36,7 +36,7 @@ class Program
                 else if (guess < magic_number) {
                         Console.Write("Higer\n");
                 }
-
+                // This is the Criteria. 
              } while (guess != magic_number || response == "yes"); 
         }
 
