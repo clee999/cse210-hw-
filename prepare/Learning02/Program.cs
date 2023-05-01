@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 //Class: Job Responsibilities:
 //Keeps track of the company, job title, start year, and end year.
 
@@ -23,6 +25,21 @@ class Program
         job1._startYear = 2019;
         job1._endYear = 2022;
         job1.Display();
+
+        Job job2 = new Job();
+        job2._jobTitle = "Apple Developer";
+        job2._company = "Apple";
+        job2._startYear = 2022;
+        job2._endYear = 2023;
+        job2.Display();
+
+        Resume resume1 = new Resume();
+        resume1._name = "Carl Lee"; 
+        resume1._job.Add(job1);
+        resume1._job.Add(job2);
+        resume1.Display();
+        
+
         
     }
 
@@ -31,10 +48,12 @@ class Program
         public string _name;
         public List<Job>_job = new List<Job>();
 
-        
-
         public void Display(){
 
+             Console.WriteLine($"Name:{_name}");
+             Console.WriteLine($"Jobs:");
+             Console.WriteLine($"{_job[0]._jobTitle} ({_job[0]._company}) {_job[0]._startYear}-{_job[0]._endYear}");
+             Console.WriteLine($"{_job[1]._jobTitle} ({_job[1]._company}) {_job[1]._startYear}-{_job[1]._endYear}");
         }
     }
 
