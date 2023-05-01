@@ -6,7 +6,7 @@ class Program
     {
         DisplayMessage("Welcome to the program!");
 
-        Console.Write("Are you a brother or Sister? ");
+        Console.Write("Are you a Brother or Sister? ");
         string title = Console.ReadLine();
         PromptBro_Sis(title);
 
@@ -21,7 +21,6 @@ class Program
         DisplayResult(name, sq_root, title);
 
 
-       
     }
     static void DisplayMessage(string message)
     {
