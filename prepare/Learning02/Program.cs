@@ -50,10 +50,13 @@ class Program
 
         public void Display(){
 
-             Console.WriteLine($"Name:{_name}");
-             Console.WriteLine($"Jobs:");
-             Console.WriteLine($"{_job[0]._jobTitle} ({_job[0]._company}) {_job[0]._startYear}-{_job[0]._endYear}");
-             Console.WriteLine($"{_job[1]._jobTitle} ({_job[1]._company}) {_job[1]._startYear}-{_job[1]._endYear}");
+             Console.WriteLine($"Name: {_name}");
+             Console.WriteLine($"Jobs: ");
+
+            foreach(Job jobs in _job){
+                jobs.Display();
+            }
+    
         }
     }
 
